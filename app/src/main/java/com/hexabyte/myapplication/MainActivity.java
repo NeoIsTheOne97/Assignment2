@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Switch;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     ImageView img;
@@ -30,6 +31,12 @@ public class MainActivity extends AppCompatActivity {
         imgB=findViewById(R.id.imageButton);
         rg=findViewById(R.id.radioGroup);
         btn=findViewById(R.id.button);
+        imgB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"Hello World",Toast.LENGTH_SHORT).show();
+            }
+        });
         sw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
